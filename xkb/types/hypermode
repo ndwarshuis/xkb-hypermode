@@ -1,0 +1,37 @@
+xkb_types "hypermode" {
+	virtual_modifiers Shift,Hyper,AltGr;
+	
+	//AltGr in this case is used to control the embedded numpad
+	//not make trippy Swedish symbols as is done elsewhere
+	type "SHIFT_HYPER" {
+		 modifiers= Shift+Hyper;
+		 map[Shift]= Level2;
+		 map[Hyper]= Level3;
+		 map[Hyper+Shift]= Level3;
+		 level_name[Level1]= "Base";
+		 level_name[Level2]= "Shift";
+		 level_name[Level3]= "Hyper";
+	};
+	type "SHIFT_ALTGR" {
+		 modifiers= Shift+AltGr;
+		 map[Shift]= Level2;
+		 map[AltGr]= Level3;
+		 map[AltGr+Shift]= Level3;
+		 level_name[Level1]= "Base";
+		 level_name[Level2]= "Shift";
+		 level_name[Level3]= "Numbed";
+	};
+	type "SHIFT_HYPER_ALTGR" {
+		 modifiers= Shift+Hyper+AltGr;
+		 map[Shift]= Level2;
+		 map[Hyper]= Level3;
+		 map[AltGr]= Level4;
+		 map[Hyper+Shift]= Level3;
+		 map[Shift+AltGr]= Level4;
+		 map[Hyper+Shift+AltGr]= Level4;
+		 level_name[Level1]= "Base";
+		 level_name[Level2]= "Shift";
+		 level_name[Level3]= "Hyper";
+		 level_name[Level4]= "Numbed";
+	};
+};
