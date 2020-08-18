@@ -3,10 +3,14 @@ xkb_symbols "basic" {
 
     name[Group1]= "English (hypermode)";
 
-	//add new modifiers for hyperlayer and numlayer
+    //add new modifiers for hyperlayer and numlayer
     modifier_map Mod3 { Hyper_L, Hyper_R };
     key <HYPR> {	[ NoSymbol, Hyper_L	]	};
     modifier_map Mod3   { <HYPR> };
+
+    modifier_map Mod4 { Super_L, Super_R };
+    key <SUPR> {	[ NoSymbol, Super_L	]	};
+    modifier_map Mod4   { <SUPR> };
 
     modifier_map Mod5   { ISO_Level3_Shift };
     key <LVL3> {	[ ISO_Level3_Shift	]	};
