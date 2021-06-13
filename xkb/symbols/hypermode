@@ -3,14 +3,10 @@ xkb_symbols "basic" {
 
     name[Group1]= "English (hypermode)";
 
-    //add new modifiers for hyperlayer and numlayer
+	//add new modifiers for hyperlayer and numlayer
     modifier_map Mod3 { Hyper_L, Hyper_R };
     key <HYPR> {	[ NoSymbol, Hyper_L	]	};
     modifier_map Mod3   { <HYPR> };
-
-    modifier_map Mod4 { Super_L, Super_R };
-    key <SUPR> {	[ NoSymbol, Super_L	]	};
-    modifier_map Mod4   { <SUPR> };
 
     modifier_map Mod5   { ISO_Level3_Shift };
     key <LVL3> {	[ ISO_Level3_Shift	]	};
@@ -84,11 +80,11 @@ xkb_symbols "basic" {
 	// defines right alt (maybe we call it alt-right???)
     key <RALT> { type[Group1]="SHIFT_ALTGR",   [ Hyper_R,	Hyper_R,   period	] };
 
-	// reassign xcape keys to unused keycodes (I249-I254)
-	key <I249> { [ Return						] };
+	// reassign xcape keys to unused keycodes
+	key <I217> { [ Return						] };
 //	key <I250> { [ Escape						] };
-    key <I250> { [ Tab,			ISO_Left_Tab	] };
-    key <I252> { [ backslash,	bar				] };
+    key <I219> { [ Tab,			ISO_Left_Tab	] };
+    key <I222> { [ backslash,	bar				] };
 
 	// space is weird becuase we also make it function as a 0 in the numlayer
     key <I253> { type="SHIFT_ALTGR", [ space, space, 0 ] };
