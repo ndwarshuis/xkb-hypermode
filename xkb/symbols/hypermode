@@ -87,5 +87,5 @@ xkb_symbols "basic" {
     key <I222> { [ backslash,	bar				] };
 
 	// space is weird becuase we also make it function as a 0 in the numlayer
-    key <I253> { type="SHIFT_ALTGR", [ space, space, 0 ] };
+    key <I120> { type="SHIFT_ALTGR", [ space, space, 0 ] };
 };
