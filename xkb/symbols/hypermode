@@ -1,91 +1,87 @@
 default  partial alphanumeric_keys modifier_keys
 xkb_symbols "basic" {
 
-    name[Group1]= "English (hypermode)";
+    name[Group1]="English (hypermode)";
 
-	//add new modifiers for hyperlayer and numlayer
-    modifier_map Mod3 { Hyper_L, Hyper_R };
-    key <HYPR> {	[ NoSymbol, Hyper_L	]	};
-    modifier_map Mod3   { <HYPR> };
+    //add new modifiers for hyperlayer and numlayer
+    key <HYPR> {[ NoSymbol, Hyper_L ]};
+    modifier_map Mod3 { <HYPR> };
 
-    modifier_map Mod5   { ISO_Level3_Shift };
-    key <LVL3> {	[ ISO_Level3_Shift	]	};
-    key <MDSW> {	[ Mode_switch 		]	};
-    modifier_map Mod5   { <LVL3>, <MDSW> };
+    key <LVL3> {[ ISO_Level3_Shift ]};
+    modifier_map Mod5 { <LVL3> };
 
-	// std us keys
-    key <TLDE> {							[ grave,	asciitilde			] };
-    key <AE01> { type="SHIFT_HYPER",		[ 1,		exclam,			F1 	] };
-    key <AE02> { type="SHIFT_HYPER",		[ 2,		at,				F2	] };
-    key <AE03> { type="SHIFT_HYPER",		[ 3,		numbersign,		F3	] };
-    key <AE04> { type="SHIFT_HYPER", 		[ 4,		dollar,			F4	] };
-    key <AE05> { type="SHIFT_HYPER",		[ 5,		percent,		F5	] };
-    key <AE06> { type="SHIFT_HYPER",		[ 6,		asciicircum,	F6	] };
-    key <AE07> { type="SHIFT_HYPER",		[ 7,		ampersand,		F7	] };
-    key <AE08> { type="SHIFT_HYPER",		[ 8,		asterisk,		F8	] };
-    key <AE09> { type="SHIFT_HYPER",		[ 9,		parenleft,		F9	] };
-    key <AE10> { type="SHIFT_HYPER",		[ 0,		parenright,		F10	] };
-    key <AE11> { type="SHIFT_HYPER",		[ minus,	underscore,		F11	] };
-    key <AE12> { type="SHIFT_HYPER",		[ equal,	plus,			F12	] };
+    // std us keys
+    key <TLDE> {[ grave, asciitilde       ]};
+    key <AE01> {[ 1,     exclam,      F1  ], type="SHIFT_HYPER" };
+    key <AE02> {[ 2,     at,          F2  ], type="SHIFT_HYPER" };
+    key <AE03> {[ 3,     numbersign,  F3  ], type="SHIFT_HYPER" };
+    key <AE04> {[ 4,     dollar,      F4  ], type="SHIFT_HYPER" };
+    key <AE05> {[ 5,     percent,     F5  ], type="SHIFT_HYPER" };
+    key <AE06> {[ 6,     asciicircum, F6  ], type="SHIFT_HYPER" };
+    key <AE07> {[ 7,     ampersand,   F7  ], type="SHIFT_HYPER" };
+    key <AE08> {[ 8,     asterisk,    F8  ], type="SHIFT_HYPER" };
+    key <AE09> {[ 9,     parenleft,   F9  ], type="SHIFT_HYPER" };
+    key <AE10> {[ 0,     parenright,  F10 ], type="SHIFT_HYPER" };
+    key <AE11> {[ minus, underscore,  F11 ], type="SHIFT_HYPER" };
+    key <AE12> {[ equal, plus,        F12 ], type="SHIFT_HYPER" };
 
-    key <AD01> { 							[ q,			Q						] };
-    key <AD02> { type="SHIFT_HYPER",		[ w,			W,			Insert		] };
-    key <AD03> { type="SHIFT_HYPER",		[ e,			E,			Home		] };
-    key <AD04> { type="SHIFT_HYPER",		[ r,			R,			Prior		] };
-    key <AD05> { 							[ t,			T						] };
-    key <AD06> {							[ y,			Y						] };
-    key <AD07> { type="SHIFT_ALTGR",		[ u,			U,			7			] };
-    key <AD08> { type="SHIFT_ALTGR",		[ i,			I,			8			] };
-    key <AD09> { type="SHIFT_ALTGR",		[ o,			O,			9			] };
-    key <AD10> { type="SHIFT_ALTGR",		[ p,			P,			asciicircum	] };
-    key <AD11> { 							[ bracketleft,	braceleft				] };
-    key <AD12> {							[ bracketright,	braceright				] };
+    key <AD01> {[ q,            Q                       ]};
+    key <AD02> {[ w,            W,          Insert      ], type="SHIFT_HYPER" };
+    key <AD03> {[ e,            E,          Home        ], type="SHIFT_HYPER" };
+    key <AD04> {[ r,            R,          Prior       ], type="SHIFT_HYPER" };
+    key <AD05> {[ t,            T                       ]};
+    key <AD06> {[ y,            Y                       ]};
+    key <AD07> {[ u,            U,          7           ], type="SHIFT_ALTGR" };
+    key <AD08> {[ i,            I,          8           ], type="SHIFT_ALTGR" };
+    key <AD09> {[ o,            O,          9           ], type="SHIFT_ALTGR" };
+    key <AD10> {[ p,            P,          asciicircum ], type="SHIFT_ALTGR" };
+    key <AD11> {[ bracketleft,  braceleft               ]};
+    key <AD12> {[ bracketright, braceright              ]};
 
-    key <AC01> {	  						[ a,			A 								] };
-    key <AC02> { type="SHIFT_HYPER",		[ s,			S,			Delete				] };
-    key <AC03> { type="SHIFT_HYPER",		[ d,			D,			End					] };
-    key <AC04> { type="SHIFT_HYPER",		[ f,			F,			Next				] };
-    key <AC05> {							[ g,			G								] };
-    key <AC06> { type="SHIFT_HYPER_ALTGR",	[ h,			H,			Left,	asterisk	] };
-    key <AC07> { type="SHIFT_HYPER_ALTGR",	[ j,			J,			Down,	4			] };
-    key <AC08> { type="SHIFT_HYPER_ALTGR",	[ k,			K,			Up,		5			] };
-    key <AC09> { type="SHIFT_HYPER_ALTGR",	[ l,			L,			Right,	6			] };
-    key <AC10> { type="SHIFT_ALTGR",		[ semicolon,	colon,				plus		] };
-    key <AC11> { type="SHIFT_ALTGR",		[ apostrophe,	quotedbl,			equal		] };
+    key <AC01> {[ a,          A                         ]};
+    key <AC02> {[ s,          S,        Delete          ], type="SHIFT_HYPER"};
+    key <AC03> {[ d,          D,        End             ], type="SHIFT_HYPER"};
+    key <AC04> {[ f,          F,        Next            ], type="SHIFT_HYPER"};
+    key <AC05> {[ g,          G                         ]};
+    key <AC06> {[ h,          H,        Left,  asterisk ], type="SHIFT_HYPER_ALTGR"};
+    key <AC07> {[ j,          J,        Down,  4        ], type="SHIFT_HYPER_ALTGR"};
+    key <AC08> {[ k,          K,        Up,    5        ], type="SHIFT_HYPER_ALTGR"};
+    key <AC09> {[ l,          L,        Right, 6        ], type="SHIFT_HYPER_ALTGR"};
+    key <AC10> {[ semicolon,  colon,    plus            ], type="SHIFT_ALTGR"};
+    key <AC11> {[ apostrophe, quotedbl, equal           ], type="SHIFT_ALTGR"};
 
-    key <AB01> { 							[ z,		Z 					] };
-    key <AB02> {							[ x,		X					] };
-    key <AB03> {							[ c,		C					] };
-    key <AB04> {							[ v,		V					] };
-    key <AB05> {							[ b,		B					] };
-    key <AB06> { type="SHIFT_ALTGR",		[ n,		N,			slash	] };
-    key <AB07> { type="SHIFT_ALTGR",		[ m,		M,			1		] };
-    key <AB08> { type="SHIFT_ALTGR",		[ comma,	less,		2		] };
-    key <AB09> { type="SHIFT_ALTGR",		[ period,	greater,	3		] };
-    key <AB10> { type="SHIFT_ALTGR",		[ slash,	question,	minus	] };
+    key <AB01> {[ z,      Z               ]};
+    key <AB02> {[ x,      X               ]};
+    key <AB03> {[ c,      C               ]};
+    key <AB04> {[ v,      V               ]};
+    key <AB05> {[ b,      B               ]};
+    key <AB06> {[ n,      N,        slash ], type="SHIFT_ALTGR"};
+    key <AB07> {[ m,      M,        1     ], type="SHIFT_ALTGR"};
+    key <AB08> {[ comma,  less,     2     ], type="SHIFT_ALTGR"};
+    key <AB09> {[ period, greater,  3     ], type="SHIFT_ALTGR"};
+    key <AB10> {[ slash,  question, minus ], type="SHIFT_ALTGR"};
 
-	// override modifiers
-    key <CAPS> { [ Control_L			] };
-    key <LCTL> { [ Hyper_L				] };
-    key <RCTL> { [ Caps_Lock			] };
-	key <RTRN> { [ Control_R			] };
-	key <TAB>  { [ Super_L,		Super_L	] };
-	key <BKSL> { [ Super_R,		Super_R	] };
-    key <SPCE> { [ Alt_R,		Meta_R	] };
+    // override modifiers
+    key <CAPS> {[ Control_L                 ]};
+    key <LCTL> {[ Hyper_L                   ]};
+    key <RCTL> {[ Caps_Lock                 ]};
+    key <RTRN> {[ Control_R                 ]};
+    key <TAB>  {[ Super_L,          Super_L ]};
+    key <BKSL> {[ Super_R,          Super_R ]};
+    key <SPCE> {[ Alt_R,            Meta_R  ]};
+    key <LWIN> {[ ISO_Level3_Shift          ]};
 
-	key <LWIN> { [ ISO_Level3_Shift	] };
+    // right alt is special because it is the decimal point in the numlayer
+    // ...and yes, "group1" is necessary here because of the way the us layout
+    // defines right alt (maybe we call it alt-right?)
+    key <RALT> { type[Group1]="SHIFT_ALTGR", [ Hyper_R, Hyper_R, period ]};
 
-	// right alt is special because it is the decimal point in the numlayer
-	// ...and yes, "group1" is necessary here because of the way the us layout
-	// defines right alt (maybe we call it alt-right???)
-    key <RALT> { type[Group1]="SHIFT_ALTGR",   [ Hyper_R,	Hyper_R,   period	] };
+    // reassign xcape keys to unused keycodes
+    key <I217> {[ Return ]};
+    key <I219> {[ Tab, ISO_Left_Tab ]};
+    key <I222> {[ backslash, bar ]};
+    //key <I250> {[ Escape ]};
 
-	// reassign xcape keys to unused keycodes
-	key <I217> { [ Return						] };
-//	key <I250> { [ Escape						] };
-    key <I219> { [ Tab,			ISO_Left_Tab	] };
-    key <I222> { [ backslash,	bar				] };
-
-	// space is weird becuase we also make it function as a 0 in the numlayer
-    key <I120> { type="SHIFT_ALTGR", [ space, space, 0 ] };
+    // space is weird becuase we also make it function as a 0 in the numlayer
+    key <I120> { type="SHIFT_ALTGR", [ space, space, 0 ]};
 };
